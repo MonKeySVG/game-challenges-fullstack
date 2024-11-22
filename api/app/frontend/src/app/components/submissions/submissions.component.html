@@ -15,17 +15,20 @@
     </li>
   </ul>
 
-  <h3>Add a New Submission</h3>
-  <form (ngSubmit)="addSubmission()" class="submission-form">
-    <label for="title">Title</label>
-    <input id="title" [(ngModel)]="newSubmission.title" name="title" required />
+  <div class="form-container">
+    <h3>Add a New Submission</h3>
+    <form (ngSubmit)="addSubmission()" class="submission-form">
+      <label for="title">Title</label>
+      <input id="title" [(ngModel)]="newSubmission.title" name="title" required />
 
-    <label for="description">Description</label>
-    <input id="description" [(ngModel)]="newSubmission.description" name="description" />
+      <label for="description">Description</label>
+      <input id="description" [(ngModel)]="newSubmission.description" name="description" />
 
-    <label for="video_link">Video Link</label>
-    <input id="video_link" [(ngModel)]="newSubmission.video_link" name="video_link" required />
+      <label for="video_link">Video Link</label>
+      <input id="video_link" [(ngModel)]="newSubmission.video_link" name="video_link" required />
 
-    <button type="submit">Submit</button>
-  </form>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
 </div>

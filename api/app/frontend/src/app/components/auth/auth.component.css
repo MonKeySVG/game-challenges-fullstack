@@ -3,12 +3,14 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
-
+  margin-block: 80px;
 }
 
 .auth-container div {
-  outline: solid 1px black;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 40px;
+  border-radius: 10px;
+  background-color: #FAF7F0;
 }
 
 .auth-form {
@@ -22,6 +24,32 @@
 }
 
 .auth-form input {
-  margin-bottom: 20px;
+
   font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+
+.auth-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-button {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  margin-top: 30px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
 }

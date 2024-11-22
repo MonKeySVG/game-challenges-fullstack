@@ -18,28 +18,45 @@ export class AuthComponent {
   loginUsername = '';
   loginPassword = '';
 
+  message = ''; // Message à afficher
+  messageType: 'success' | 'error' | '' = ''; // Type de message ('success', 'error', '')
+
   constructor(private apiService: ApiService, private router: Router) {}
 
   register() {
+    this.message = ''; // Réinitialiser le message
     this.apiService.registerUser(this.username, this.password).subscribe(
       response => {
-        console.log('User registered:', response);
+        this.messageType = 'success';
+        this.message = 'Compte créé avec succès !';
       },
       error => {
-        console.error('Registration error:', error);
+        this.messageType = 'error';
+        if (error.status === 409) { // Conflit - nom d'utilisateur existant
+          this.message = 'Nom d’utilisateur déjà existant.';
+        } else {
+          this.message = 'Erreur lors de la création du compte.';
+        }
       }
     );
   }
 
   login() {
+    this.message = ''; // Réinitialiser le message
     this.apiService.login(this.loginUsername, this.loginPassword).subscribe(
       response => {
-        console.log('Login successful, token:', response.access_token);
+        this.messageType = 'success';
+        this.message = 'Connexion réussie !';
         localStorage.setItem('token', response.access_token); // Stocker le token
         this.router.navigate(['/games']); // Rediriger vers GamesComponent
       },
       error => {
-        console.error('Login error:', error);
+        this.messageType = 'error';
+        if (error.status === 401) { // Non autorisé - identifiants incorrects
+          this.message = 'Identifiant ou mot de passe incorrect.';
+        } else {
+          this.message = 'Erreur lors de la connexion.';
+        }
       }
     );
   }

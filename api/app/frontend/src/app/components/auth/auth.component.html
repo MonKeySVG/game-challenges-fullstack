@@ -1,4 +1,5 @@
 <div class="auth-container">
+
   <div class="auth-section">
     <h2 class="auth-title">Register</h2>
     <form class="auth-form" (ngSubmit)="register()">
@@ -45,3 +46,10 @@
     </form>
   </div>
 </div>
+
+<div class="auth-message-container">
+  <div *ngIf="message" class="auth-message" [ngClass]="messageType">
+      {{ message }}
+  </div>
+</div>
+

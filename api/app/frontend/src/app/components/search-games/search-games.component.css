@@ -16,10 +16,14 @@
 
 .search-input {
   width: 50%;
-  padding: 10px;
   font-size: 1.2em;
-  border: 1px solid black;
-  border-radius: 4px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  text-align: center;
 }
 
 .search-input:focus {
@@ -62,6 +66,20 @@
 .selected-game img {
   width: 200px;
   height: 200px;
-    object-fit: cover;
+  border-radius: 10px;
+  margin-block: 20px;
+  object-fit: cover;
   object-position: center;
+}
+
+.add-to-database-button {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
 }

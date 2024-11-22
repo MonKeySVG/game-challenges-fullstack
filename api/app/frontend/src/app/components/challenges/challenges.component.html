@@ -12,7 +12,7 @@
 
 
 <div class="challenges-container">
-  <h2>Challenges</h2>
+  <h1>Challenges</h1>
 
 
   <ul *ngIf="challenges.length > 0" class="challenges-list">
@@ -24,8 +24,10 @@
   </ul>
   <p *ngIf="challenges.length === 0">No challenges available.</p>
 
-  <h3>Add a New Challenge</h3>
-  <form class="challenges-form" (ngSubmit)="addChallenge()">
+
+  <div class="form-container">
+    <h3>Add a New Challenge</h3>
+    <form class="challenges-form" (ngSubmit)="addChallenge()">
     <label for="title">Title</label>
     <input id="title" [(ngModel)]="newChallenge.title" name="title" required />
 
@@ -34,5 +36,7 @@
 
     <button type="submit">Add Challenge</button>
   </form>
+  </div>
+
 
 </div>

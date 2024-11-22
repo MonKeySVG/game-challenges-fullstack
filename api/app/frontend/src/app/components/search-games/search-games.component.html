@@ -5,7 +5,7 @@
     (input)="onSearch()"
     (focus)="onFocus()"
     (blur)="onBlur()"
-    placeholder="Add a new game"
+    [placeholder]="isDropdownVisible || query ? '' : 'Add a new game'"
     class="search-input"
   />
    <ul *ngIf="results.length > 0" [class.hidden]="!isDropdownVisible" class="results-dropdown">
@@ -19,6 +19,6 @@
     <div class="selected-game-content">
       <img [src]="selectedGame.background_image" alt="Game Image" class="selected-game-image" />
     </div>
-    <button (click)="addGameToDatabase()">Add to Database</button>
+    <button (click)="addGameToDatabase()" class="add-to-database-button">Add to Database</button>
   </div>
 </div>
