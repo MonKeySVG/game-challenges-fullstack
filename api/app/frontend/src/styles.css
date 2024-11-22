@@ -1,0 +1,16 @@
+:root {
+  /*--primary-color: #111111;*/
+  /*--secondary-color: #ef476f;*/
+  /*--accent-color: #ffd166;*/
+
+
+}
+
+/* Usage example */
+body {
+  margin: 0;
+  padding: 0;
+  /*background-color: var(--primary-color);*/
+}
+
+

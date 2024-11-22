@@ -1,0 +1,15 @@
+<div class="games-container">
+  <h2 class="games-title">Games</h2>
+
+  <app-search-games></app-search-games>
+
+  <div *ngIf="games.length > 0" class="games-grid">
+    <a *ngFor="let game of games" [routerLink]="['/games', game.id, 'challenges']" class="game-card" [style.backgroundImage]="'url(' + game.background_image + ')'">
+      <div class="game-content">
+        <strong class="game-title">{{ game.title }}</strong>
+      </div>
+    </a>
+  </div>
+
+  <p *ngIf="games.length === 0" class="no-games">No games available.</p>
+</div>

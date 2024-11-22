@@ -1,0 +1,38 @@
+
+<div class="game-header">
+
+  <div class="game-image">
+    <img [src]="gameBackgroundImage" alt="Game Image" />
+  </div>
+
+  <div class="game-title">
+    <h1>{{ gameTitle }}</h1>
+  </div>
+</div>
+
+
+<div class="challenges-container">
+  <h2>Challenges</h2>
+
+
+  <ul *ngIf="challenges.length > 0" class="challenges-list">
+    <li *ngFor="let challenge of challenges" class="challenge-item">
+      <a [routerLink]="['/games', gameId, 'challenges', challenge.id, 'submissions']" class="challenge-link">
+        <strong>{{ challenge.title }}</strong>: {{ challenge.description }}
+      </a>
+    </li>
+  </ul>
+  <p *ngIf="challenges.length === 0">No challenges available.</p>
+
+  <h3>Add a New Challenge</h3>
+  <form class="challenges-form" (ngSubmit)="addChallenge()">
+    <label for="title">Title</label>
+    <input id="title" [(ngModel)]="newChallenge.title" name="title" required />
+
+    <label for="description">Description</label>
+    <input id="description" [(ngModel)]="newChallenge.description" name="description" />
+
+    <button type="submit">Add Challenge</button>
+  </form>
+
+</div>

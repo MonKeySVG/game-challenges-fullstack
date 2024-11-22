@@ -1,0 +1,31 @@
+<div class="submissions-container">
+  <h2>Submissions</h2>
+
+  <ul class="submissions-list">
+    <li *ngFor="let submission of submissions" class="submission-item">
+      <div class="submission-header">
+        <strong class="submission-username">{{ submission.username }}</strong> -
+        <span class="submission-title">{{ submission.title }}</span>
+      </div>
+      <div class="submission-body">
+        <p class="submission-description">{{ submission.description }}</p>
+        <a [href]="submission.video_link" target="_blank" class="submission-video-link">Watch Video</a>
+        <small class="submission-date">Submitted at: {{ submission.submitted_at | date:'medium' }}</small>
+      </div>
+    </li>
+  </ul>
+
+  <h3>Add a New Submission</h3>
+  <form (ngSubmit)="addSubmission()" class="submission-form">
+    <label for="title">Title</label>
+    <input id="title" [(ngModel)]="newSubmission.title" name="title" required />
+
+    <label for="description">Description</label>
+    <input id="description" [(ngModel)]="newSubmission.description" name="description" />
+
+    <label for="video_link">Video Link</label>
+    <input id="video_link" [(ngModel)]="newSubmission.video_link" name="video_link" required />
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,67 @@
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.search-input {
+  width: 50%;
+  padding: 10px;
+  font-size: 1.2em;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.results-dropdown {
+  position: absolute;
+  top: 100%; /* Juste en dessous de l'input */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(50% + 20px); /* Même largeur que l'input */
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Assure que le menu est au-dessus */
+  max-height: 300px; /* Limite la hauteur */
+  overflow-y: auto; /* Permet de scroller si trop d'éléments */
+}
+
+.hidden {
+  display: none;
+}
+
+.result-item {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background-color: #f1f1f1;
+}
+
+.selected-game {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selected-game img {
+  width: 200px;
+  height: 200px;
+    object-fit: cover;
+  object-position: center;
+}

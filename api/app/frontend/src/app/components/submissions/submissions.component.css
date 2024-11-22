@@ -1,0 +1,89 @@
+
+.submissions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 80px;
+}
+
+.submissions-container h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Submissions List */
+.submissions-list {
+  list-style: none; /* Supprime les puces */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.submission-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.submission-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Submission Details */
+.submission-header {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.submission-username {
+  color: #007bff;
+}
+
+.submission-title {
+  font-weight: normal;
+  color: #333;
+}
+
+.submission-body {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.submission-description {
+  margin: 0;
+}
+
+.submission-video-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.submission-video-link:hover {
+  text-decoration: underline;
+}
+
+.submission-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 5px;
+  display: block;
+}
+
+.submission-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submission-form input {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}

@@ -1,0 +1,83 @@
+.game-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  margin: 40px 80px;
+  gap: 40px;
+}
+
+.challenges-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 80px;
+}
+
+.challenges-form {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.challenges-form input {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Challenges Container */
+.challenges-container {
+  margin-top: 20px;
+}
+
+.challenges-container h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Challenges List */
+.challenges-list {
+  list-style: none; /* Supprime les puces */
+  padding: 0;
+  margin: 0;
+}
+
+.challenge-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.challenge-item:hover {
+  background-color: #f0f0f0;
+}
+
+.challenge-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.challenge-link:hover {
+  text-decoration: underline;
+}
+
+/* No challenges message */
+.challenges-container p {
+  color: #999;
+  font-style: italic;
+}

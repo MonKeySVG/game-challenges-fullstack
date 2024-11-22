@@ -1,0 +1,27 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+}
+
+.auth-container div {
+  outline: solid 1px black;
+  padding: 40px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.auth-title {
+  text-align: center;
+}
+
+.auth-form input {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}

@@ -1,0 +1,71 @@
+
+
+/* Conteneur principal des jeux */
+.games-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Titre des jeux */
+.games-title {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grille pour les jeux */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Carte individuelle pour chaque jeu */
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  aspect-ratio: 1 / 1.3;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.game-content {
+  z-index: 2;
+  text-align: center;
+}
+
+.game-title {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Message pour aucun jeu disponible */
+.no-games {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+}
